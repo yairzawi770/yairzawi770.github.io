@@ -8,14 +8,19 @@
 
 <body>
     <script>
-        fneme = prompt('enter your first name')
-        lneme = prompt('enter your last name')
-        consol.log(fname)
-        consol.log(lname)
-        consol.log('your name is')
-        consol.log(fname + lname)
 
-
+        fname = prompt('enter your first name')
+        lname = prompt('enter your last name')
+        //1.
+        document.write(fname)
+        document.write('&nbsp;')
+        document.write(lname)
+        document.write('<br />')
+        document.write(fname + ' ' + lname)
+        //2.
+        console.log(fname + ' ' + lname)
+        alert(fname + ' ' + lname)
+    
     </script>
 </body>
 
