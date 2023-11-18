@@ -1,5 +1,5 @@
 div {
-    width: 30%;
+    width: 33%;
 
     border: 5px dashed;
     border-radius: 15px;
@@ -7,7 +7,6 @@ div {
     border-right-color: green;
     border-bottom-color: blue;
     border-left-color: indigo;
-    border-spacing: 0%;
     padding: 0%;
     row-gap: 0%;
 }
