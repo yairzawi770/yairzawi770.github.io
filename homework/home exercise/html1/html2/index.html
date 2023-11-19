@@ -64,7 +64,7 @@
         <div class="dropdown-content">
             <a href="#">Jerusalem</a>
             <a href="#">Tel Aviv</a>
-            <a href="#">Reshon Lezion</a>
+            <a href="#">Rishon Lezion</a>
         </div>
     </div>
     <hr>
@@ -102,25 +102,45 @@
         <h1>Let's go somewhere</h1>
         <form action="/action_page.php">
             <label for="fname">First name</label>
-            <input type="text" id="fname" name="fname"><br/>
+            <input type="text" id="fname" name="fname"><br />
             <label for="lname">Family name</label>
-            <input type="text" id="lname" name="lname" placeholder="Put your family name here" ><br><br>
-            
-            Male
-            Female
+            <input type="text" id="lname" name="lname" placeholder="Put your family name here">
+            <br /><br />
+            <span>Gender:</span>
             <input type="radio" id="html" name="fav_language" value="HTML">
-              <label for="html">Gender:</label><br>
-              <input type="radio" id="css" name="fav_language" value="CSS">
-              <label for="css">CSS</label><br>
-              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-              <label for="javascript">JavaScript</label>
-            
+            <label for="html"></label>
+            <span>Male</span>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css"></label>
+            <span>Female</span>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript"></label><br /><br />
 
-            
-            
+            <label for="cars">Choose a city:</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Tel-Aviv</option>
+            </select>
+            <br />
+            <br />
+            <span>Date to travel:</span><br>
+            <label for="birthday">From:</label>
+            <input type="date" id="birthday" name="birthday">
+            <label for="birthday">To:</label>
+            <input type="date" id="birthday" name="birthday">
+            <br />
+            <br />
+            <span>Giv me deals for:</span><br />
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">Kiev</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">Amsterdam</label><br />
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3">Roma</label><br />
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">London</label>
+            <br />
+            <br />
             <input type="submit" value="Send">
-          </form> 
-
 
 
 
