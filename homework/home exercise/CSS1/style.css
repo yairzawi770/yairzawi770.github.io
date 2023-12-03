@@ -1,0 +1,44 @@
+#l14 {
+    width: 750px;
+    background-size: 50px;
+    background-color: yellow;
+}
+
+#l15 {
+    color: red;
+    background-color: yellow;
+    font-size: 40px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.Tel {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#l37 {
+    background-color: #0f4d8f;
+    width: 1150px;
+    height: 500px;
+    text-align: center;
+    margin: 180px;
+    padding: 10px;
+}
+
+#l39 {
+    width: 550px;
+    border: 5px solid #ddd;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 0%;
+}
+
+#l38 {
+    color: #ddd;
+    font-size: 30px;
+    margin: 10px;
+
+}
