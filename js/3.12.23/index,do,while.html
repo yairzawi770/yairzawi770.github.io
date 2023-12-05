@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 12;
+        do {
+            document.write(x + ' ');
+            x++;
+        }
+        while (x <= 24);
+        document.write('<br/>');
+
+        let y = 7;
+        do {
+            document.write(y + ' ');
+            y += 2;
+        }
+        while (y <= 31);
+        document.write('<br/>');
+
+        let z = 10;
+        do {
+            document.write(z + ' ');
+            z -= 2;
+        }
+        while (z >= -20);
+        document.write('<br/>');
+
+        let i = 1;
+
+        do {
+            if (i % 15 == 0) {
+                document.write('FizzBuzz');
+            }
+            else if (i % 5 == 0) {
+                document.write('Buzz');
+            }
+            else if (i % 3 == 0) {
+                document.write('Fizz');
+            }
+            else {
+                document.write(i + ' ');
+            }
+            i++;
+        }
+        while (i <= 45);
+        document.write('<br/>');
+
+        let array = [1, 13, 22, 123, 49, 34, 5, 24, 57, 45];
+        let scum = 0;
+        let a = 0;
+        do {
+            scum += array[a];
+            a++;
+        }
+        
+        while (a < array.length);
+
+        document.write(scum);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
