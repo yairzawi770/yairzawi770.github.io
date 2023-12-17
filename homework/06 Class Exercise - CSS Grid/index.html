@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css grid</title>
+</head>
+
+
+    <style>
+        .the_header {grid-area: header;}
+        .the_copy {grid-area: _copy;}
+        .the_section {grid-area: section;}
+        .the_contact {grid-area: contact;}
+        .the_h1 {grid-area: contact;}
+        .the_h2 {grid-area: contact;}
+        .the_h3 {grid-area: contact;}
+
+        .grid-container {
+            display: grid;
+            height: 130vh;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 0.4fr 1.4fr 1.2fr 0.1fr;
+            grid-template-areas: 
+             'header header header'
+             'section section contact'
+             '_h1 _h2 _h3'
+             '_copy _copy _copy';
+            gap: 10px;
+            background-color: black;
+            padding: 10px;
+        }
+        .grid-container > div {
+        background-color: aliceblue;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    </style>
+<body>
+    <div class="grid-container">
+        <div class="the_header"><b>Main Header</b></div>
+        <div class="the_section" style="padding:20px 150px"><b>Section Header</b><br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta magnam alias 
+        nihil molestiae esse? Architecto perspiciatis aperiam, at autem sed facere provident 
+        maiores accusamus facilis, iure cupiditate. Veniam, omnis.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ab dignissimos debitis error nihil recusandae illum sequi magnam quae voluptatibus repudiandae porro perferendis earum laudantium ipsa, suscipit, delectus beatae nostrum et enim perspiciatis dolorem! Minus ullam ad mollitia consequuntur tempora veniam sed sunt maxime. Deserunt assumenda aperiam illo quis odit explicabo neque, ex voluptatum nisi molestias voluptate quae beatae earum!</div>
+        <div class="the_contact"><b>Contacts Us</b></div>
+        <div class="_h1"><b>Heading 1</b></div>
+        <div class="_h2"><b>Heading 2</b></div>
+        <div class="_h3"><b>Heading 3</b></div>
+        <div class="the_copy">Copyright &copy; 2023</div>
+    </div>
+</body>
+
+</html>
