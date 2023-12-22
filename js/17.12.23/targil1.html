@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [10, 20, 30, 40, 50]
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt('enter number for array:' + i))
+        }
+        //sum all of the numbers
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        document.write(arr);
+        document.write('<br/>');
+        document.write('sum = ' + sum);
+        document.write('<br/>');
+        //calculate the avg
+        const avg = sum / arr.length
+        document.write('avg =' + avg)
+    </script>
+</body>
+
+</html>

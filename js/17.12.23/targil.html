@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const student_in_class = parseInt(prompt('How many students?'))
+        const arr = new Array(student_in_class).fill(0)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt('Enter grade for student array #' + i))
+        }
+        //sum all of the numbers
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        document.write(arr)
+        document.write('<br />')
+        document.write('sum = ' + sum)
+        document.write('<br />')
+        //calculate the avg
+        const avg = sum / arr.length
+        document.write('avg = ' + avg)
+    </script>
+</body>
+
+</html>

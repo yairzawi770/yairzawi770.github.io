@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        const arr55 = new Array(100).fill(55)
+        document.write('fill:' + arr55);
+        document.write('<br/>')
+
+        //2
+        const arr_length = parseInt(prompt('enter array length:'))
+        const value_of_elemets = parseInt(prompt('enter value:'))
+        const arr_dynmaic = new Array(arr_length).fill(value_of_elemets)
+        document.write('the value: ' + arr_dynmaic + '<br/>')
+
+        //3
+        const student_in_class = parseInt(prompt('How many students?:'))
+        const grades = new Array(student_in_class).fill(0)
+        for (let i = 0; i < grades.length; i++) {
+            grades[i] = parseInt(prompt('enter grade for student array' + i))
+        }
+        document.write('student in class:' + student_in_class + '<br/>')
+        document.write('grades:' + grades + '<br/>')
+
+        let sum = 0
+        for (let i = 0; i < grades.length; i++) {
+            sum = sum += grades[i]
+        }
+        document.write('sum =' + sum + '<br/>')
+        const avg = sum / grades.length
+        document.write('avg = ' + avg + '<br/>')
+        let above_avg = 0
+        let under_avg = 0
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] > avg) {
+                above_avg++
+            }
+            else if (grades[i] < avg) {
+                under_avg++
+            }
+        }
+        document.write('above avg = ' + above_avg + '<br />')
+        document.write('under avg = ' + under_avg + '<br />')
+        
+        //4
+        for (let i = 0; i < grades.length; i++) {
+            document.write(' ' + grades[i] + ' ')
+            if (grades[i] < 50) {
+                document.write('Weak')
+            }
+            else if (grades[i] >= 50 && grades[i] <= 69) {
+                document.write('Average')
+            }
+            else if (grades[i] >= 70 && grades[i] <= 89) {
+                document.write('Good')
+            }
+            else if (grades[i] >= 90) {
+                document.write('Excellent')
+            }
+            document.write('<br />')
+        }
+
+  
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
