@@ -7,9 +7,11 @@
 
 <body>
 
-    <img id="my_card" src="images/J_of_hearts.png" alt="my card" width="250" />
+    <img id="my_card" src="my card" alt="my_card" width="220">
     <hr />
-    <img id="comp_card" src="images/J_of_hearts.png" alt="comp card" width="250" />
+    <hr />
+    <hr />
+    <img id="comp_card" src="comp card" alt="comp_card" width="220">
 
     <script>
         // get a number from the user
@@ -25,17 +27,43 @@
             case 7:
             case 8:
             case 9:
-            case 10: document.write(my_card + '_of_hearts.png')
+            case 10: document.getElementById('my_card').src = 'images/' + my_card + '_of_hearts.png'
                 break;
-            case 11:document.write('J_of_hearts.png')
+            case 11: document.getElementById('my_card').src = 'images/' + my_card + 'J_of_hearts.png'
                 break;
-            case 12:document.write('Q_of_hearts.png')
+            case 12: document.getElementById('my_card').src = 'images/' + my_card + 'Q_of_hearts.png'
                 break;
-            case 13:document.write('K_of_hearts.png')
+            case 13: document.getElementById('my_card').src = 'images/' + my_card + 'K_of_hearts.png'
                 break;
-            case 14:document.write('A_of_hearts.png')
+            case 14: document.getElementById('my_card').src = 'images/' + my_card + 'A_of_hearts.png'
                 break;
-            case 15:document.write('JOKER.png')
+            case 15: document.getElementById('my_card').src = 'images/' + my_card + 'JOKER.png'
+                break;
+        }
+        document.write('<br />')
+
+
+        
+        switch (my_card) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10: document.getElementById('comp_card').src = 'images/' + my_card + '_of_spades.png'
+                break;
+            case 11: document.getElementById('comp_card').src = 'images/' + my_card + 'J_of_spades.png'
+                break;
+            case 12: document.getElementById('comp_card').src = 'images/' + my_card + 'Q_of_spades.png'
+                break;
+            case 13: document.getElementById('comp_card').src = 'images/' + my_card + 'K_of_spades.png'
+                break;
+            case 14: document.getElementById('comp_card').src = 'images/' + my_card + 'A_of_spades.png'
+                break;
+            case 15: document.getElementById('comp_card').src = 'images/' + my_card + 'JOKER.png'
                 break;
         }
         document.write('<br />')
