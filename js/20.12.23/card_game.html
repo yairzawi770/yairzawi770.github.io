@@ -7,17 +7,17 @@
 
 <body>
 
-    <img id="my_card" src="my card" alt="my_card" width="220">
+    <img id="my_card" src="" alt="my card" width="200">
     <hr />
-    <hr />
-    <hr />
-    <img id="comp_card" src="comp card" alt="comp_card" width="220">
+    <img id="computer_card" src="" alt="computer card" width="200">
 
     <script>
         // get a number from the user
-        const my_card = parseInt(prompt("What's your card?"))
-        // 2-10: document.write (the number)
+        const my_card = parseInt(Math.random() * 14) +2
 
+        const computer_card = parseInt(Math.random() * 14) +2
+
+        // 2-10: document.write (the number)
         switch (my_card) {
             case 2:
             case 3:
@@ -29,22 +29,22 @@
             case 9:
             case 10: document.getElementById('my_card').src = 'images/' + my_card + '_of_hearts.png'
                 break;
-            case 11: document.getElementById('my_card').src = 'images/' + my_card + 'J_of_hearts.png'
+            case 11: document.getElementById('my_card').src = 'images/J_of_hearts.png'
                 break;
-            case 12: document.getElementById('my_card').src = 'images/' + my_card + 'Q_of_hearts.png'
+            case 12: document.getElementById('my_card').src = 'images/Q_of_hearts.png'
                 break;
-            case 13: document.getElementById('my_card').src = 'images/' + my_card + 'K_of_hearts.png'
+            case 13: document.getElementById('my_card').src = 'images/K_of_hearts.png'
                 break;
-            case 14: document.getElementById('my_card').src = 'images/' + my_card + 'A_of_hearts.png'
+            case 14: document.getElementById('my_card').src = 'images/A_of_hearts.png'
                 break;
-            case 15: document.getElementById('my_card').src = 'images/' + my_card + 'JOKER.png'
+            case 15: document.getElementById('my_card').src = 'images/JOKER.png'
                 break;
         }
         document.write('<br />')
- 
 
-        
-        switch (comp_card) {
+
+
+        switch (computer_card) {
             case 2:
             case 3:
             case 4:
@@ -53,20 +53,29 @@
             case 7:
             case 8:
             case 9:
-            case 10: document.getElementById('comp_card').src = 'images/' + my_card + '_of_spades.png'
+            case 10: document.getElementById('computer_card').src = 'images/' + computer_card + '_of_spades.png'
                 break;
-            case 11: document.getElementById('comp_card').src = 'images/' + my_card + 'J_of_spades.png'
+            case 11: document.getElementById('computer_card').src = 'images/J_of_spades.png'
                 break;
-            case 12: document.getElementById('comp_card').src = 'images/' + my_card + 'Q_of_spades.png'
+            case 12: document.getElementById('computer_card').src = 'images/Q_of_spades.png'
                 break;
-            case 13: document.getElementById('comp_card').src = 'images/' + my_card + 'K_of_spades.png'
+            case 13: document.getElementById('computer_card').src = 'images/K_of_spades.png'
                 break;
-            case 14: document.getElementById('comp_card').src = 'images/' + my_card + 'A_of_spades.png'
+            case 14: document.getElementById('computer_card').src = 'images/A_of_spades.png'
                 break;
-            case 15: document.getElementById('comp_card').src = 'images/' + my_card + 'JOKER.png'
-                break;
+            case 15: document.getElementById('computer_card').src = 'images/JOKER.png'
+        
         }
-        document.write('<br />')
+
+        if (my_card > computer_card) {
+            document.write('<h1 style="color:green">MY CARD WIN</h1>')
+        }
+        else if (my_card < computer_card) {
+            document.write('<h1 style="color:red">MY CARD LOOSE</h1>')
+        }
+        else if (my_card == computer_card) {
+            document.write('<h1 style="color:yelloe">DRAW</h1>')
+        }
     </script>
 </body>
 
