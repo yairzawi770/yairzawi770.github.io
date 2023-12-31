@@ -6,73 +6,106 @@
 </head>
 
 <body>
-
-    <img id="my_card" src="" alt="my card" width="200">
+    <h1>my card</h1>
+    <img id="my_card0" src="" alt="my card" width="200px">
+    <img id="my_card1" src="" alt="my card" width="200px">
+    <img id="my_card2" src="" alt="my card" width="200px">
+    <img id="my_card3" src="" alt="my card" width="200px">
+    <img id="my_card4" src="" alt="my card" width="200px">
     <hr />
-    <img id="computer_card" src="" alt="computer card" width="200">
+    <h1>compyuter card</h1>
+    <img id="computer_card0" src="" alt="computer card" width="200px">
+    <img id="computer_card1" src="" alt="computer card" width="200px">
+    <img id="computer_card2" src="" alt="computer card" width="200px">
+    <img id="computer_card3" src="" alt="computer card" width="200px">
+    <img id="computer_card4" src="" alt="computer card" width="200px">
+
 
     <script>
-        // get a number from the user
-        const my_card = parseInt(Math.random() * 14) +2
 
-        const computer_card = parseInt(Math.random() * 14) +2
+        let scum_mycard = 0;
+        let scum_computer = 0;
 
-        // 2-10: document.write (the number)
-        switch (my_card) {
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10: document.getElementById('my_card').src = 'images/' + my_card + '_of_hearts.png'
-                break;
-            case 11: document.getElementById('my_card').src = 'images/J_of_hearts.png'
-                break;
-            case 12: document.getElementById('my_card').src = 'images/Q_of_hearts.png'
-                break;
-            case 13: document.getElementById('my_card').src = 'images/K_of_hearts.png'
-                break;
-            case 14: document.getElementById('my_card').src = 'images/A_of_hearts.png'
-                break;
-            case 15: document.getElementById('my_card').src = 'images/JOKER.png'
-                break;
-        }
-        document.write('<br />')
 
-        switch (computer_card) {
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10: document.getElementById('computer_card').src = 'images/' + computer_card + '_of_spades.png'
-                break;
-            case 11: document.getElementById('computer_card').src = 'images/J_of_spades.png'
-                break;
-            case 12: document.getElementById('computer_card').src = 'images/Q_of_spades.png'
-                break;
-            case 13: document.getElementById('computer_card').src = 'images/K_of_spades.png'
-                break;
-            case 14: document.getElementById('computer_card').src = 'images/A_of_spades.png'
-                break;
-            case 15: document.getElementById('computer_card').src = 'images/JOKER.png'
-        
-        }
+        for (let i = 0; i < 5; i++) {
+            // get a number from the user
+            const my_card = parseInt(Math.random() * 14) + 2
+            const computer_card = parseInt(Math.random() * 14) + 2
 
-        if (my_card > computer_card) {
-            document.write('<h1 style="color:green">MY CARD WIN</h1>')
-        }
-        else if (my_card < computer_card) {
-            document.write('<h1 style="color:red">MY CARD LOOSE</h1>')
-        }
-        else if (my_card == computer_card) {
-            document.write('<h1 style="color:yelloe">DRAW</h1>')
+            // 2-10: document.write (the number)
+            switch (my_card) {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10: document.getElementById('my_card' + i).src = 'images/' + my_card + '_of_hearts.png'
+                    break;
+                case 11: document.getElementById('my_card' + i).src = 'images/J_of_hearts.png'
+                    break;
+                case 12: document.getElementById('my_card' + i).src = 'images/Q_of_hearts.png'
+                    break;
+                case 13: document.getElementById('my_card' + i).src = 'images/K_of_hearts.png'
+                    break;
+                case 14: document.getElementById('my_card' + i).src = 'images/A_of_hearts.png'
+                    break;
+                case 15: document.getElementById('my_card' + i).src = 'images/JOKER.png'
+                    break;
+            }
+            document.write('<br />')
+
+            switch (computer_card) {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10: document.getElementById('computer_card' + i).src = 'images/' + computer_card + '_of_spades.png'
+                    break;
+                case 11: document.getElementById('computer_card' + i).src = 'images/J_of_spades.png'
+                    break;
+                case 12: document.getElementById('computer_card' + i).src = 'images/Q_of_spades.png'
+                    break;
+                case 13: document.getElementById('computer_card' + i).src = 'images/K_of_spades.png'
+                    break;
+                case 14: document.getElementById('computer_card' + i).src = 'images/A_of_spades.png'
+                    break;
+                case 15: document.getElementById('computer_card' + i).src = 'images/JOKER.png'
+
+            }
+
+            if (my_card > computer_card) {
+                scum_mycard++
+                document.write('scum my card:' + scum_mycard)
+            }
+
+            else if (my_card < computer_card) {
+                scum_computer++
+                document.write('scum my computer card:' + scum_computer)
+
+            }
+            else if (computer_card == my_card) {
+                scum_mycard += 0.5
+                scum_computer += 0.5
+                document.write('scum my card:' + scum_mycard)
+            }
+
+            if (my_card > computer_card) {
+                document.write('<h1 style="color:green">MY CARD WIN</h1>')
+            }
+            else if (my_card < computer_card) {
+                document.write('<h1 style="color:red">MY CARD LOOSE</h1>')
+            }
+            else if (my_card == computer_card) {
+                document.write('<h1 style="color:yelloe">DRAW</h1>')
+            }
+
         }
     </script>
 </body>

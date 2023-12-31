@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1" onclick="print_xy1()">10_30</button>
+
+    <script>
+
+        //2.
+        function print_xy1(x = 0, y = 0) {
+            console.log(x + y)
+
+        }
+        print_xy1()
+        print_xy1(10)
+        print_xy1(10, 30)
+
+        //3.
+        function print_xy2(x, y = 1) {
+            console.log(x / y)
+        }
+
+        print_xy2(5)
+        print_xy2(10)
+        print_xy2(10, 2)
+        
+        //4.
+        function print_hi(name = "John Doe", country = "Israel") {
+            console.log(name + " " + country);
+        }
+        print_hi()
+        print_hi('danny')
+        print_hi("danny", "USA")
+        print_hi(undefined, "Canada")
+        print_hi(undefined, undefined)
+
+    </script>
+</body>
+
+</html>

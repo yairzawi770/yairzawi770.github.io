@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function add(x, y) {
+            return x + y
+        }
+        document.write(add(2, 5))
+
+
+        function my_max(x, y = 0) {
+            if (x > y) {
+                return
+                x
+            }
+            else
+                return y
+            return x > y ? x : y
+        }
+        console.log(my_max(6, 12));
+
+
+        function is_even(x) {
+            if (x % 2 == 0) {
+                return true
+            }
+            else {
+                return false
+            }
+            return x % 2 == 0 ? true : false
+            return x % 2 == 0
+        }
+        console.log(is_even(12, 2));
+
+
+        function div_xy(x, y = 1) {
+            return x / y
+        }
+        console.log(div_xy(12, 2));
+
+
+        function is_negativ(x) {
+            if (x < 0) {
+                return true
+            }
+            else {
+                return false
+            }
+            return x < 0 
+        }
+        console.log(is_negativ(9, 2));
+
+
+        function greatest(x = 0, y = 0, z = 0) {
+            if (x > y && x > Z)
+                return x
+            else if (y > x && y > z)
+                return y
+            else
+                return z
+
+        }
+        console.log(greatest(10, 20, 30));
+
+
+    </script>
+</body>
+
+</html>

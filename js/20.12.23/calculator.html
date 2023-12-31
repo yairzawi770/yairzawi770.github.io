@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    NUMBER: <input id="num1" type="number" /><button id="plus_btn" onclick="func1()">+</button><input id="num2" type="number" />
+    <p id="result1">Result:</p>
+
+    NUMBER: <input id="num3" type="number" /><button id="minus_btn" onclick="func2()">-</button><input id="num4" type="number" />
+    <p id="result2">Result:</p>
+
+    NUMBER: <input id="num5" type="number" /><button id="kefel_btn" onclick="func3()">*</button><input id="num6" type="number" />
+    <p id="result3">Result:</p>
+
+    NUMBER: <input id="num7" type="number" /><button id="chiluk_btn" onclick="func4()">/</button><input id="num8" type="number" />
+    <p id="result4">Result:</p>
+    <script>
+        function func1() {
+            const x = parseInt(document.getElementById('num1').value)
+            const y = parseInt(document.getElementById('num2').value)
+            document.getElementById('result1').innerHTML = x + ' + ' + y + ' = ' + (x + y)
+        }
+
+        function func2() {
+            const x = parseInt(document.getElementById('num3').value)
+            const y = parseInt(document.getElementById('num4').value)
+            document.getElementById('result2').innerHTML = x + ' - ' + y + ' = ' + (x - y)
+        }
+
+        function func3() {
+            const x = parseInt(document.getElementById('num5').value)
+            const y = parseInt(document.getElementById('num6').value)
+            document.getElementById('result3').innerHTML = x + ' * ' + y + ' = ' + (x * y)
+        }
+
+        function func4() {
+            const x = parseInt(document.getElementById('num7').value)
+            const y = parseInt(document.getElementById('num8').value)
+            document.getElementById('result4').innerHTML = x + ' / ' + y + ' = ' + (x / y)
+        }
+    </script>
+</body>
+
+</html>

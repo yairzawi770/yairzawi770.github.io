@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //true
+        //  1   1    1   1
+        if (a + b && c + d) { document.write('true') } else { document.write('false') }
+
+        //false
+        //  0   0    0   0
+        if (a + b && c + d) { document.write('true') } else { document.write('false') }
+
+        //true
+        //  4    2    5   4
+        if (a >= b || c > d) { document.write('true') } else { document.write('false') }
+
+        //false
+        //  2    4    2   4
+        if (a >= b || d > c) { document.write('true') } else { document.write('false') }
+
+        //true
+        //  4    2    1   1
+        if (a >= b || d < c) { document.write('true') } else { document.write('false') }
+
+        //false
+        //  2    4    4   2
+        if (a >= b || d < c) { document.write('true') } else { document.write('false') }
+
+        //true
+        //  5     5    5    4
+        if (a === b && d <= c) { document.write('true') } else { document.write('false') }
+
+        //false
+        // '5'    5    1    5
+        if (a === b && d <= c) { document.write('true') } else { document.write('false') }
+
+        //true
+        //          1   2   3   4 
+        if (true && a + b + c + d) { document.write('true') } else { document.write('false') }
+
+        //false
+        //          0   0   0   0
+        if (true && a + b + c + d) { document.write('true') } else { document.write('false') }
+
+        //true
+        //  1    2
+        if (a != b) { document.write('true') } else { document.write('false') }
+
+        //false
+        //  1    1
+        if (a != b) { document.write('true') } else { document.write('false') }
+
+        //true
+        //  its always true 
+        if (a != b && a <= c || a <= b || true) { document.write('true') } else { document.write('false') }
+
+        //true 
+        //                      1    2
+        if (a != b && a <= c || a <= b || false) { document.write('true') } else { document.write('false') }
+
+        //false
+        //  1    1    5    4    1    0                          
+        if (a != b && a <= c || a <= b || false) { document.write('true') } else { document.write('false') }
+
+        //true 
+        // 10   5        11   2
+        if (a % b == 0 && c % d == 1) { document.write('true') } else { document.write('false') }
+
+        //false
+        // 10   5         10  5
+        if (a % b == 0 && c % d == 1) { document.write('true') } else { document.write('false') }
+
+
+
+        //true or false?
+
+        //  4 < 9  true
+        // (2 * 3 + 4) * (7 + 7) false
+        // 18 + 18 true
+        // 10 == 10 true 
+        // 10 == 10 && 20 == 30 false
+        // 10 == 10 || 20 == 30 true
+        // 20 == 30 || 10 == 10 true
+        // !3 false
+        // 3 true
+        // (33 > 20) && (2 < 12) && 10 true
+        // true && true true
+        // true && false false
+        // true || false true 
+        // false || true true
+        // (!10) && (10) false 
+        // (!10) && (!10) true
+        // 5 != 5 && 5 != 5 false
+        // 2 === 2 || 3 == 3 true
+        // 2 === 2 && 3 == 3 true
+        // 40 <= 30 && 1 >= 4 false
+        // 13 >= 3 || 47 >= 5 true 
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
