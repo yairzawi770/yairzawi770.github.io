@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Man 1 -- table example</title>
+</head>
+
+<body>
+    <h2>Add Menu Item</h2>
+    <div>
+        <p>ID: <input type="number" id="id_txt" autofocus> &nbsp;&nbsp;&nbsp;Item Name: <input type="text" id="id_name">
+        </p>
+        <p>Description: <input type="text" id="id_description"> &nbsp;&nbsp;&nbsp; Price: <input type="number"
+                id="id_price">
+        </p>
+        <p>Picture URL: <input type="text" id="id_url"><br /><br />
+
+            <button onclick="add_click()">ADD ROW</button>
+    </div>
+    <br />
+    <table id="users_table" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Item NAME</th> 
+            <th>Description</th>
+            <th>Price</th>
+            <th>Picture URL</th>
+        </tr>
+    </table>
+
+    <script src="dom_man1.js"></script>
+
+</body>
+
+</html>

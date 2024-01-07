@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const divider = parseInt(prompt('enter the divider:'))
+        const breaker = parseInt(prompt('enter the breaker:'))
+        for (let i = 1; i <= 100; i++) {
+            if (i == breaker)
+                break
+            if (i % divider == 0)
+                continue
+            document.write(i, '<br/>')
+        }
+    </script>
+</body>
+ </html>

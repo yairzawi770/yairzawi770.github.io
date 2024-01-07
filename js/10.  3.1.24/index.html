@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <p>NAME: <input type="text" id="name_txt" /></p>
+    <!-- <button class="button1" id="btn1" onclick="click_button()">Hover me</button> -->
+    <button class="button1" id="btn1" onclick="">Hover me</button>
+
+    <hr>
+    <p id="result"></p>
+    <script>
+        function click_button() {
+            document.getElementById('result').innerHTML += 'clicked button <br/>'
+        }
+
+        const result = document.getElementById('result')
+        const btn1 = document.getElementById('btn1')
+        const input_name = document.getElementById('name_txt')
+
+
+        //1
+        btn1.addEventListener('click', click_button)
+
+        //2
+        btn1.addEventListener('click', function click_button() {
+            result.innerHTML += 'clicked button <br/>'
+        })
+        //3
+        btn1.addEventListener('click', function () {
+            result.innerHTML += 'clicked button <br/>'
+        })
+        //4
+        btn1.addEventListener('click', () => {
+            result.innerHTML += 'hello ' + input_name.valu + '!'
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

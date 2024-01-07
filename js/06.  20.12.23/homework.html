@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<script>
+
+    //1
+    function targil1(x = 0, y = 0) {
+        return x === y
+    }
+
+    //2
+    function targil2(a, b, c) {
+        return a < b && a < c ? a : b < c ? b : c
+    }
+
+    //3
+    function targil3(word = 'sesamie', times = 1) {
+        for (let i = 1; i <= times; i++) {
+            document.write(word)
+        }
+    }
+
+    4
+    function targil4(str1, str2) {
+        return str1.length > str2 ? str1 : str2
+    }
+
+    //5
+    function targil5(f = 1) {
+        let fact = 1
+        for (let i = 2; i <= f; i++) {
+            fact *= i
+        }
+        return fact
+    }
+
+
+    document.write('1 == 1 ? ', targil1(1, 1), '<br/>')
+    document.write('1 == 2 ? ', targil1(1, 2), '<br/>')
+    document.write('targil2: 10, 20, 30 ? ', targil2(10, 20, 30), '<br/>')
+    document.write('targil2: 10, 20, 30 ? ', targil2(), '<br/>')
+    targil3()
+    targil3('java', 3)
+    document.write('<br/>')
+    document.write("avi, danny ? longer == ", targil4('avi', 'danny'), '<br/>')
+    document.write('targil5: ', targil5(5))
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
