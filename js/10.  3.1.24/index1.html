@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea id="largeTextarea" cols="50" rows="10">text area:</textarea>
+    <br />
+    location: <p id="x_y"></p>
+
+    <script>
+        document.getElementById('largeTextarea').addEventListener('mouseover', (e) => {
+            document.getElementById('x_y').innerHTML = `${parseInt(e.x)}, ${parseInt(e.y)} px`
+        })
+        
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

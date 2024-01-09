@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrays1</title>
+</head>
+
+<body>
+    <p>GRADE : <input type="number" id="grade_txt"></p>
+    <button id="btn_add_right_side">ADD RIGHT SIDE</button>
+    <button id="btn_rem_right_side">REMOVE FROM RIGHT SIDE</button>
+    <button id="btn_add_left_side">ADD LEFT SIDE</button>
+    <button id="btn_rem_left_side">REMOVE FROM LEFT SIDE</button>
+    <button id="btn_sum" onclick="">SUM</button>
+    <button id="btn_avg" onclick="">AVG</button>
+    <hr>
+    <p id="result">[]</p>
+    <script>
+
+        const grades = []
+        const grade_txt = document.getElementById('grade_txt')
+        const btn_add_right_side = document.getElementById('btn_add_right_side')
+        const btn_rem_right_side = document.getElementById('btn_rem_right_side')
+        const btn_add_left_side = document.getElementById('btn_add_left_side')
+        const btn_rem_left_side = document.getElementById('btn_rem_left_side')
+        const btn_sum = document.getElementById('btn_sum')
+        const btn_avg = document.getElementById('btn_avg')
+        const result = document.getElementById('result')
+        let sum = 0
+        let avg = 0
+
+        btn_add_right_side.addEventListener('click', (e) => {
+            const grade = parseFloat(grade_txt.value)
+            grades.push(grade)
+            result.innerHTML = `[ ${grades} ]`
+        })
+
+        btn_add_left_side.addEventListener('click', () => {
+            const grade = parseFloat(grade_txt.value)
+            grades.unshift(grade)
+            result.innerHTML = `[ ${grades} ]`
+        })
+
+        btn_rem_right_side.addEventListener('click', () => {
+            grades.pop()
+            result.innerHTML = `[ ${grades} ]`
+        })
+
+        btn_rem_left_side.addEventListener('click', () => {
+            grades.shift()
+            result.innerHTML = `[ ${grades} ]`
+        })
+
+        function calc_sum() {
+            sum = 0
+            for (const grade of grades) {
+                sum += grade
+            }
+            result.innerHTML = `[ ${grades} ] <br />
+                Sum = ${sum}`
+        }
+
+
+        btn_sum.addEventListener('click', calc_sum)
+        btn_avg.addEventListener('click', () => {
+            avg = sum / grades.length
+            result.innerHTML += `<br />
+                avg = ${avg}`
+        })
+
+
+    </script>
+</body>
+
+</html>
