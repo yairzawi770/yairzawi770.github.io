@@ -8,14 +8,36 @@
 
 <body>
     <script>
-        const days = ['aunday, monday, tuesday, wedsnesday, friday, saturday']
-        const current_day = 0
-        document.write('switch case <br/>')
+       const days = ['sunday, monday, tuesday, wedsnesday, thursday, friday, saturday']
+        const current_day = parseInt(prompt('enter number'))
+      
         switch (current_day) {
-            case 0:
+            case 1:
+                document.write('sunday')
+                break
+            case 2:
+                document.write('monday')
+                break
+            case 3:
+                document.write('tuesday')
+                break
+            case 4:
+                document.write('wedsnesday')
+                break
+            case 5:
+                document.write('thursday')
+                break
+            case 6:
+                document.write('friday')
+                break
+            case 6:
+                document.write('saturday')
+                break
+            default:
+                document.write('is not in rang')
         }
-        document.write('sunday')
-        
+
+
 
 
 

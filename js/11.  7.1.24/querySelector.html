@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>NAME: <input type="text" id="name_text"></p>
+    <button class="button1" id="btn1" onclick="">click me</button>&nbsp;
+    <hr>
+
+    <p id="result"></p>
+
+    <script>
+
+        const result = document.getElementById('result')
+        const name_text = document.getElementById('name_text')
+        const btn1_by_class = document.querySelector('.button1')
+        const btn1_by_id = document.getElementById('btn1')
+
+        //option 2.
+        const button_by_class = document.querySelectorAll('.button1')
+        for (let i = 0; i < button_by_class.length; i++) {
+            button_by_class[i].addEventListener('click', () => {
+                result.innerHTML += `hello ${name_text.value}! <br/>`
+            })
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

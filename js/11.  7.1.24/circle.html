@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        #circle {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            border: 3px solid green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+
+    <script>
+
+        function key_down(e) {
+            console.log(e.key)
+            switch (e.key) {
+                'ArrowLeft':
+              document.getElementById('circle').style.left = 
+        }
+        }
+
+        document.addEventListener('keydown', key_down)
+
+
+    </script>
+</body>
+
+</html>

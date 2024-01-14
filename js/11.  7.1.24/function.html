@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>function</title>
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button2 {
+            background-color: aqua;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>NAME: <input type="text" id="name_text"></p>
+    <button class="button1" id="btn1" onclick="click_button()">click me</button>&nbsp;
+    <button class="button2" id="btn2" onclick="">show the time</button>
+    <hr>
+
+    <p id="result"></p>
+
+    <script>
+
+        const result = document.getElementById('result')
+        const btn2 = document.getElementById('btn2')
+        const name_text = document.getElementById('name_text')
+
+        //option 1
+        function click_button() {
+            result.innerHTML += `hello ${name_text.value}! <br/>`
+        }
+
+        //option 2
+        btn2.addEventListener('click', () => {
+            result.innerHTML += `hello ${name_text.value}! <br/>`
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

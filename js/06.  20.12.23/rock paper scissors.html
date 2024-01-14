@@ -7,14 +7,14 @@
 
 <body>
     <h1>my klaf</h1>
-    <img id="my_klaf" src="" alt="my_klaf" width="200px">
-    <img id="my_klaf" src="" alt="my_klaf" width="200px">
-    <img id="my_klaf" src="" alt="my_klaf" width="200px">
+    <img id="my_klaf1" src="" alt="my_klaf" width="200px">
+    <img id="my_klaf2" src="" alt="my_klaf" width="200px">
+    <img id="my_klaf3" src="" alt="my_klaf" width="200px">
     <hr>
     <h1>comp_card</h1>
-    <img id="comp_card" src="" alt="comp_card" width="200px">
-    <img id="comp_card" src="" alt="comp_card" width="200px">
-    <img id="comp_card" src="" alt="comp_card" width="200px">
+    <img id="comp_card1" src="" alt="comp_card" width="200px">
+    <img id="comp_card2" src="" alt="comp_card" width="200px">
+    <img id="comp_card3" src="" alt="comp_card" width="200px">
 
     <script>
         let rock = 1;
@@ -23,13 +23,41 @@
         let my_klaf = parseInt(prompt('enter number:'))
         let comp_card = parseInt(Math.random() * 3) + 1
 
+        switch (my_klaf){
+            case 1: 
+            document.getElementById('my_klaf1').src = 'images2/rock.jpg' 
+            break
+            case 2: 
+            document.getElementById('my_klaf1').src = 'images2/paper.jpg' 
+            break
+            case 3: 
+            document.getElementById('my_klaf1').src = 'images2/scissors.jpg' 
+            break
+        }
+
+
+
+        switch (comp_card){
+            case 1: 
+            document.getElementById('comp_card1').src = 'images2/rock.jpg' 
+            break
+            case 2: 
+            document.getElementById('comp_card1').src = 'images2/paper.jpg' 
+            break
+            case 3: 
+            document.getElementById('comp_card1').src = 'images2/scissors.jpg' 
+            break
+        }
+
+
+
         if (my_klaf == comp_card) {
             console.log('teko')
         }
-        else if (my_klaf == 0 && comp_card == 2) {
+        else if (my_klaf == 1 && comp_card == 3) {
             console.log('player win')
         }
-        else if (my_klaf == 1 && comp_card == 0) {
+        else if (my_klaf == 3 && comp_card == 2) {
             console.log('player win')
         }
         else if (my_klaf == 2 && comp_card == 1) {
