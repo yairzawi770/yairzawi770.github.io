@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        function print_10() {
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${i} <br/>`)
+            }
+        }
+        print_10()
+
+        function sum(a, b) {
+            const c = a + b
+            return c
+
+        }
+        const sum1 = sum(10, 5)
+        console.log(sum1);
+
+        const card = Math.floor(Math.random() * 15)
+
+        function biggest(arr) {
+            let max = arr[0]
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+
+            }
+            return max;
+        }
+
+        const my_arr = [6, 87, 9, 1001, -1, 0]
+        document.write(my_arr)
+        document.write('<br/>')
+        document.write(biggest(my_arr))
+
+        
+
+    </script>
 </body>
+
 </html>

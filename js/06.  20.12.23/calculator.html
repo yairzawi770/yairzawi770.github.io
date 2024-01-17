@@ -6,37 +6,37 @@
 </head>
 
 <body>
-    NUMBER: <input id="num1" type="number" /><button id="plus_btn" onclick="func1()">+</button><input id="num2" type="number" />
+    NUMBER: <input id="num1" type="number" /><button id="plus_btn" onclick="plus()">+</button><input id="num2" type="number" />
     <p id="result1">Result:</p>
 
-    NUMBER: <input id="num3" type="number" /><button id="minus_btn" onclick="func2()">-</button><input id="num4" type="number" />
+    NUMBER: <input id="num3" type="number" /><button id="minus_btn" onclick="minus()">-</button><input id="num4" type="number" />
     <p id="result2">Result:</p>
 
-    NUMBER: <input id="num5" type="number" /><button id="kefel_btn" onclick="func3()">*</button><input id="num6" type="number" />
+    NUMBER: <input id="num5" type="number" /><button id="kefel_btn" onclick="kefel()">*</button><input id="num6" type="number" />
     <p id="result3">Result:</p>
 
-    NUMBER: <input id="num7" type="number" /><button id="chiluk_btn" onclick="func4()">/</button><input id="num8" type="number" />
+    NUMBER: <input id="num7" type="number" /><button id="chiluk_btn" onclick="chiluk()">/</button><input id="num8" type="number" />
     <p id="result4">Result:</p>
     <script>
-        function func1() {
+        function plus() {
             const x = parseInt(document.getElementById('num1').value)
             const y = parseInt(document.getElementById('num2').value)
             document.getElementById('result1').innerHTML = x + ' + ' + y + ' = ' + (x + y)
         }
 
-        function func2() {
+        function minus() {
             const x = parseInt(document.getElementById('num3').value)
             const y = parseInt(document.getElementById('num4').value)
             document.getElementById('result2').innerHTML = x + ' - ' + y + ' = ' + (x - y)
         }
 
-        function func3() {
+        function kefel() {
             const x = parseInt(document.getElementById('num5').value)
             const y = parseInt(document.getElementById('num6').value)
             document.getElementById('result3').innerHTML = x + ' * ' + y + ' = ' + (x * y)
         }
 
-        function func4() {
+        function chiluk() {
             const x = parseInt(document.getElementById('num7').value)
             const y = parseInt(document.getElementById('num8').value)
             document.getElementById('result4').innerHTML = x + ' / ' + y + ' = ' + (x / y)

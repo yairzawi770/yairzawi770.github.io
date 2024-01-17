@@ -12,8 +12,7 @@
             border-radius: 50%;
             border: 3px solid green;
             position: absolute;
-            left: 50%;
-            top: 50%;
+
         }
     </style>
 </head>
@@ -22,17 +21,41 @@
     <div id="circle"></div>
 
     <script>
+        const circle = document.getElementById('circle')
+        circle.style.left = '100px'
+        circle.style.top = '100px'
 
-        function key_down(e) {
+        // 1
+        // function key_down(e) {
+        //     console.log(e.key)
+        //     switch (e.key) {
+        //         case 'ArrowUp': circle.style.top = parseInt(circle.style.top) - 10 + 'px'
+        //             break;
+        //         case 'ArrowDown': circle.style.top = parseInt(circle.style.top) + 10 + 'px'
+        //             break;
+        //         case 'ArrowRight': circle.style.left = parseInt(circle.style.left) + 10 + 'px'
+        //             break;
+        //         case 'ArrowLeft': circle.style.left = parseInt(circle.style.left) - 10 + 'px'
+
+        //     }
+        // }
+
+        // document.addEventListener('keydown', key_down)
+
+        //short)
+        document.addEventListener('keydown', (e) => {
             console.log(e.key)
             switch (e.key) {
-                'ArrowLeft':
-              document.getElementById('circle').style.left = 
-        }
-        }
+                case 'ArrowUp': circle.style.top = parseInt(circle.style.top) - 10 + 'px'
+                    break;
+                case 'ArrowDown': circle.style.top = parseInt(circle.style.top) + 10 + 'px'
+                    break;
+                case 'ArrowRight': circle.style.left = parseInt(circle.style.left) + 10 + 'px'
+                    break;
+                case 'ArrowLeft': circle.style.left = parseInt(circle.style.left) - 10 + 'px'
 
-        document.addEventListener('keydown', key_down)
-
+            }
+        })
 
     </script>
 </body>
