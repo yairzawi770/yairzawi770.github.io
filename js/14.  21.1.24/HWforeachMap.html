@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //map:
+        //1
+        const celsiusTemps = [0, 30, 100];
+        const faren = celsiusTemps.map(t => t * 9 / 5 + 32)
+        console.log(faren);
+
+        //2
+        const names = ["Alice", "Bob", "Charlie"];
+        const hello = names.map(name => `Hello ${name}`)
+        console.log(hello);
+
+        //foreach:
+        //1
+        const numbers = [2, 4, 5, 8];
+        const opp = numbers.map(number => number * (-1))
+        console.log(opp);
+
+        //2
+        const numberSum = [10, 20, 30, 40];
+        let sum = 0;
+        numberSum.forEach(num => sum += num)
+        console.log(`${numberSum} = ${sum}`);
+
+        //3
+        const words = ['JavaScript', 'is', 'awesome'];
+        console.log(words.join(' '))
+
+        //4
+        const _numbers = [2, 4, 6, 8, 10];
+        let all_even = true
+        _numbers.forEach(x => {
+            if (x % 2 == 1)
+                all_even = false
+        })
+        console.log(all_even ? 'the array contains only even numbers' :
+            'the array DOES NOT contain only even numbers');
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

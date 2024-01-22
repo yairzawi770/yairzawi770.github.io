@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-        const arr = [ ]
-        while (true) {
-
+    
+    <head>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <script>
+            const arr = [ ]
+            while (true) {
+                
             let number = parseInt(prompt('enter anumber'))
             if (number == -1010) {
                 break
@@ -21,23 +19,22 @@
             }
             if (number == 999) {
                 arr.pop(number)
-                document.write(arr);
+                console.log(arr);
             }
             else if (number == 555) {
                 arr.shift(number)
-                document.write(arr);
+                console.log(arr);
             }
-            else if (number > 0) {
+            if (number > 0) {
                 arr.push(number)
-                document.write(arr);
+                console.log(arr);
             }
             else if (number < 0) {
                 arr.unshift(number)
-                document.write(arr);
+                console.log(arr);
             }
         }
-
-    </script>
+        </script>
 </body>
 
 </html>
