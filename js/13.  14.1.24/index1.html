@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <title>Document</title>
-    </head>
-    
-    <body>
-        <script>
-            const arr = [ ]
-            while (true) {
-                
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //9
+        const arr = []
+        while (true) {
+
             let number = parseInt(prompt('enter anumber'))
             if (number == -1010) {
                 break
             }
-            if (number == 0) {
+            else if (number == 0) {
                 continue
             }
-            if (number == 999) {
+            else if (number == 999) {
                 arr.pop(number)
                 console.log(arr);
             }
@@ -25,7 +26,7 @@
                 arr.shift(number)
                 console.log(arr);
             }
-            if (number > 0) {
+            else if (number > 0) {
                 arr.push(number)
                 console.log(arr);
             }
@@ -34,7 +35,7 @@
                 console.log(arr);
             }
         }
-        </script>
+    </script>
 </body>
 
 </html>
