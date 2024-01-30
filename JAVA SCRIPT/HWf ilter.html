@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const arra = []
+        while (true) {
+            let user_number = parseInt(prompt("Enter a number"))
+            if (user_number == -1010) {
+                break
+            }
+            if (user_number == 0) {
+                continue
+            }
+            if (user_number == 999) {
+                arra.pop(user_number)
+                console.log(arra);
+            }
+            else if (user_number == 555) {
+                arra.shift(user_number)
+                console.log(arra);
+            }
+            else if (user_number > 0) {
+                arra.push(user_number)
+                console.log(arra);
+            }
+            else if (user_number < 0) {
+                arra.unshift(user_number)
+                console.log(arra);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

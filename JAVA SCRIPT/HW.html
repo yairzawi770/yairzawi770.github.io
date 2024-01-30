@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        const arr = [1, 2, 3, 4]
+        document.write(arr.map(n => n * 3))
+        document.write('<br/>' + '<br/>')
+
+        //2
+        const arr1 = [3, 7, 11, 9]
+        document.write(arr1.findIndex(n => n > 10))
+        document.write('<br/>' + '<br/>')
+
+        //3
+        const arr2 = [2, 4, 6, 8]
+        document.write(arr1.every(n => n % 3 == 0))
+        document.write('<br/>' + '<br/>')
+
+        //4  
+        const arr3 = [1, 3, 5, 12]
+        const gadol_m10 = arr3.find(n => n > 10)
+        document.write(gadol_m10 ? true : false)
+        document.write('<br/>' + '<br/>')
+
+        //5
+        const arr4 = [1, 'b', 2, 'a']
+        document.write(arr4.filter(n => typeof n == "string"))
+        document.write('<br/>' + '<br/>')
+
+        //6
+        const arr6 = [3, 4, 6, 8]
+        document.write(arr6.find(n => typeof n == "number" && n > 5))
+        document.write('<br/>' + '<br/>')
+
+        //7
+        const arr7 = [1, 2, 3, 4]
+        document.write(arr7.map(n => n * 2))
+        document.write('<br/>' + '<br/>')
+
+        //8
+        const arr8 = [1, 3, 5, 7]
+        document.write(arr8.every(n => n < 10))
+        document.write('<br/>' + '<br/>')
+
+        //9
+        const arr9 = [1, 2, 3, 4, 5, 6]
+        document.write(arr9.filter(n => n % 2 == 0))
+        document.write('<br/>' + '<br/>')
+
+        //10
+        const arr10 = ["banana", "mango", "apple"]
+        document.write(arr10.map(s => s + '-extended'))
+        document.write('<br/>' + '<br/>')
+
+        //11
+        const arr11 = ["hello", "world", "programming", "computer"]
+        document.write(arr11.findIndex(s => s.length > 5))
+        document.write('<br/>' + '<br/>')
+
+        //12
+        const arr12 = ["cat", "dog", "elephant", "fox"]
+        document.write(arr12.every(s => s.length >= 3))
+        document.write('<br/>' + '<br/>')
+
+        //13
+        const arr13 = ["apple", "banana", "cherry", "date"]
+        document.write(arr13.some(f => typeof f === 'string' && f.startsWith('a')))
+        document.write('<br/>' + '<br/>')
+
+        //14
+        const arr14 = ["apple", "banana", "orange", "grape"]
+        document.write(arr14.filter(f => typeof f === 'string' && f.endsWith('e')))
+        document.write('<br/>' + '<br/>')
+
+        //15
+        const arr15 = ["apple", "banana", "cherry"]
+        document.write(arr15.filter(f => typeof f === 'string' && f.includes('b')))
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
