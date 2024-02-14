@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>function</title>
+</head>
+
+<body>
+
+    <script>
+        //1
+        let arr = [1, 2, 3, 4]
+        let sum = 0;
+        arr.forEach(i => sum += i)
+        document.write(sum + '<br/>')
+
+        //2
+        let arr1 = [1, 2, 3, 4];
+        let maxNumber = (arr => Math.max(...arr));
+        document.write("The largest number is:", maxNumber(arr) + '<br/>');
+
+        //3
+        let arr2 = "Hello World"
+        let lower = w => w.toLowerCase(...arr2)
+        document.write(lower(arr2) + '<br/>')
+
+        //4
+        let words2 = "hello";
+        let checkIndex = (w, char) => w.indexOf(char);
+        let position = checkIndex(words2, "e");
+        document.write(position + '<br/>')
+
+        //5
+        let words3 = "hello world";
+        let trouble = (w, n1, n2) => w.slice(n1, n2);
+        document.write(trouble(words3, 1, 4))
+
+        
+    </script>
+</body>
+
+</html>

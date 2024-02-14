@@ -23,37 +23,35 @@
         let my_klaf = parseInt(prompt('enter number:'))
         let comp_card = parseInt(Math.random() * 3) + 1
 
-        switch (my_klaf){
-            case 1: 
-            document.getElementById('my_klaf1').src = 'images2/rock.jpg' 
-            break
-            case 2: 
-            document.getElementById('my_klaf1').src = 'images2/paper.jpg' 
-            break
-            case 3: 
-            document.getElementById('my_klaf1').src = 'images2/scissors.jpg' 
-            break
+        switch (my_klaf) {
+            case 1:
+                document.getElementById('my_klaf1').src = 'images2/rock.jpg'
+                break
+            case 2:
+                document.getElementById('my_klaf2').src = 'images2/paper.jpg'
+                break
+            case 3:
+                document.getElementById('my_klaf3').src = 'images2/scissors.jpg'
+                break
         }
 
-
-
-        switch (comp_card){
-            case 1: 
-            document.getElementById('comp_card1').src = 'images2/rock.jpg' 
-            break
-            case 2: 
-            document.getElementById('comp_card1').src = 'images2/paper.jpg' 
-            break
-            case 3: 
-            document.getElementById('comp_card1').src = 'images2/scissors.jpg' 
-            break
+        switch (comp_card) {
+            case 1:
+                document.getElementById('comp_card1').src = 'images2/rock.jpg'
+                break
+            case 2:
+                document.getElementById('comp_card2').src = 'images2/paper.jpg'
+                break
+            case 3:
+                document.getElementById('comp_card3').src = 'images2/scissors.jpg'
+                break
         }
 
-
-
+        //teko
         if (my_klaf == comp_card) {
             console.log('teko')
         }
+        //player win
         else if (my_klaf == 1 && comp_card == 3) {
             console.log('player win')
         }
@@ -63,9 +61,17 @@
         else if (my_klaf == 2 && comp_card == 1) {
             console.log('player win')
         }
-        else {
-            console.log('compyuter win')
+        //computer win
+        else if (comp_card == 1 && my_klaf == 3) {
+            console.log('computer win')
         }
+        else if (comp_card == 3 && my_klaf == 2) {
+            console.log('computer win')
+        }
+        else if (comp_card == 2 && my_klaf == 1) {
+            console.log('computer win')
+        }
+
     </script>
 </body>
 

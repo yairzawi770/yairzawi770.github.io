@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        let arr1 = [1, 2, 3, 4]
+        document.write(arr1.map(n => n * 5))
+        document.write('<br/>', '<br/>')
+        //2
+        let arr2 = [31, 17, 11, 9]
+        document.write(arr2.findIndex(n => n > 12))
+        document.write('<br/>', '<br/>')
+        //3
+        let arr3 = [2, 4, 6, 8]
+        document.write(arr3.every(n => n % 6 == 0))
+        document.write('<br/>', '<br/>')
+        //4
+        let arr4 = [1, 3, 5, 12]
+        document.write(arr4.some(n => n > 20))
+        document.write('<br/>', '<br/>')
+        //5
+        let arr5 = [1, 'b', 2, 'a']
+        document.write(arr5.filter(w => typeof w === 'string'))
+        document.write('<br/>', '<br/>')
+        //6
+        let arr6 = ['3', 4, '6', 8]
+        document.write(arr6.find(n => typeof n === 'number' && n > 5))
+        document.write('<br/>', '<br/>')
+        //7
+        let arr7 = [1, 2, 3, 4]
+        document.write(arr7.map(n => n * 2))
+        document.write('<br/>', '<br/>')
+        //8
+        let arr8 = [1, 3, 5, 7]
+        document.write(arr8.every(n => n < 9))
+        document.write('<br/>', '<br/>')
+        //9
+        let arr9 = [1, 2, 3, 4, 5, 6]
+        document.write(arr9.filter(n => n % 2 == 1))
+        document.write('<br/>', '<br/>')
+        //10
+        let arr10 = ["apple", "mango", "banana"]
+        document.write(arr10.map(w => w + '-java '))
+        document.write('<br/>', '<br/>')
+        //11
+        let arr11 = ["hello", "world", "programming", "computer"]
+        document.write(arr11.findIndex(w => w.length > 2))
+        document.write('<br/>', '<br/>')
+        //12
+        let arr12 = ["cat", "dog", "elephant", "fox"]
+        document.write(arr12.every(w => w.length > 4))
+        document.write('<br/>', '<br/>')
+        //13
+        let arr13 = ["apple", "banana", "cherry", "date"]
+        document.write(arr13.some(w => w.startsWith('b')))
+        document.write('<br/>', '<br/>')
+        //14
+        let arr14 = ["apple", "banana", "orange", "grape"]
+        document.write(arr14.filter(w => w.endsWith('e')))
+        document.write('<br/>', '<br/>')
+        //15
+        let arr15 = ["apple", "banana", "cherry"]
+        document.write(arr15.find(w => w.includes('b')))
+        document.write('<br/>', '<br/>')
+       
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Input Types</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="textInput">Text Input:</label>
+        <input type="text" id="textInput" name="textInput" required><br><br>
+
+        <label for="numberInput">Number Input:</label>
+        <input type="number" id="numberInput" name="numberInput"><br><br>
+
+        <label for="dateInput">Date Input:</label>
+        <input type="date" id="dateInput" name="dateInput"><br><br>
+
+        <label for="colorInput">Color Input:</label>
+        <input type="color" id="colorInput" name="colorInput"><br><br>
+
+        <label>Radio Buttons:</label>
+        <input type="radio" id="radio1" name="radioInput" value="Option 1"><label for="radio1">Option 1</label>
+        <input type="radio" id="radio2" name="radioInput" value="Option 2"><label for="radio2">Option 2</label><br><br>
+
+        <label for="checkboxInput">Checkbox aaa:</label>
+        <input type="checkbox" id="checkboxInput" name="checkboxInput" value="123">Vegan?<br><br>
+
+        <label for="selectInput">Select Dropdown:</label>
+        <select id="selectInput" name="selectInput">
+            <option value="Option A">Option A</option>
+            <option value="Option B">Option B</option>
+            <option value="Option C">Option C</option>
+        </select><br><br>
+
+        <button id="sub" type="submit" onclick="">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', e => {
+            // **Bonus
+            e.preventDefault()
+
+            const textInput = document.getElementById("textInput").value;
+            const numberInput = document.getElementById("numberInput").value;
+            const dateInput = document.getElementById("dateInput").value;
+            const colorInput = document.getElementById("colorInput").value;
+
+            // const zugi = 2 % 2 == 0 ? 'zugi' : 'e-zugi'
+            // if (2 % 2 == 0 ) {
+            //     zugi = 'zugi'
+            // }
+            // else {
+            //     zugi = 'e-zugi'
+            // }
+            // const the_zugi = 2 % 2 == 0
+
+            const radioInput = document.querySelector('input[name="radioInput"]:checked') ?
+                document.querySelector('input[name="radioInput"]:checked').value : 
+                                            'not selected';
+
+            if (document.querySelector('input[name="radioInput"]:checked')) {
+                radioInput = document.querySelector('input[name="radioInput"]:checked').value
+            }
+            else {
+                radioInput = 'not selected'
+            }
+
+                                            // vegeterian?
+            const checkboxInput = document.getElementById("checkboxInput").checked ?
+                document.getElementById("checkboxInput").value : 'Not Checked';
+
+            const selectInput = document.getElementById("selectInput").value;
+
+            const result = `Text Input: ${textInput}` +
+                "<br>Number Input: " + numberInput +
+                "<br>Date Input: " + dateInput +
+                "<br>Color Input: " + colorInput +
+                "<br>Radio Button Selected: " + radioInput +
+                "<br>Checkbox: " + checkboxInput +
+                "<br>Selected Dropdown: " + selectInput;
+
+            document.getElementById("result").innerHTML = result;
+        });
+    </script>
+
+</body>
+
+</html>

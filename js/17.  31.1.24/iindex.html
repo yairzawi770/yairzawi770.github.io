@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>our firste AJAX request</title>
+</head>
+
+<body>
+    <h1>What is ajax? </h1>
+    <h1>ajax is talking to REST api from html page in js</h1>
+    <div id="result"></div>
+    <script>
+        // 1
+        // 2 -- fire request to the server .................................................
+        // async ........................................ in parallel, be-makbil
+        // fetch => when finished .. then ==> .....
+
+        // 2.1 fetch (url?) when finished then ==> 2.2 json() ==> when finished then ==> 2.3 print response
+
+        console.log('firing ajax in a second 3..2...1..');
+        // 2.1
+        console.time('fetch!')
+
+        fetch('https://jsonplaceholder.typicode.com/users/2') // fire fetch ... takes time .....
+            .then(response => {
+                console.log('fetch finished!');
+                console.timeEnd('fetch!')
+                console.time('json()!')
+                return response.json() // open the json ... takes time .....
+            })
+            .then(data => {
+                // what to do with the returned data?
+                console.log('json() finished!');
+                console.timeEnd('json()!')
+                console.log(JSON.stringify(data));
+                const js_string = JSON.stringify(data, null, 2)
+                document.getElementById('result').innerHTML = js_string.replace(/\n/g, '<br>').replace(/ /g, '&nbsp;')
+            })
+
+        // 3
+        console.log('running in parallel ....');
+        console.log('firing ajax in a second 3..2...1..');
+        // 2.1
+        console.time('fetch!')
+
+   
+    </script>
+</body>
+
+</html>
