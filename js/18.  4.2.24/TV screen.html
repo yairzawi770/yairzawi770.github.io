@@ -12,6 +12,8 @@
         th,
         td {
             border: 1px solid black;
+            text-align: center;
+            width: 1465px;
         }
 
         table {
@@ -20,7 +22,7 @@
     </style>
 </head>
 
-<body>
+<body style="margin-left: 20px;">
 
 
     <h2>Result for : TV screen 75 inch</h2>
@@ -32,79 +34,132 @@
             <th>Name of the stor</th>
             <th>Address</th>
             <th>City</th>
-            <th>Price</th>
+            <th style="width: 100px;">Price</th>
             <th>Link of the stor</th>
-            <th>Reting of the plase</th>
+            <th>Rating of the plase</th>
             <th>Options</th>
         </tr>
-        <tr id="tr1" class="red-">
+        <tr id="tr1">
             <td>1</td>
-            <td><img src="1.jpg" alt="1" width="50" height="40"></td>
-            <td>mobile</td>
-            <td>arlozorov 122</td>
-            <td>Tel Aviv</td>
-            <td>4,000</td>
+            <td><img src="1.png" alt="1" width="100" height="100">&nbsp;<a href="https://israelmobile.business.site/"
+                    target="_blank"> link</a></td>
+            <td>KSP</td>
+            <td>Narkis 15</td>
+            <td>Tel-Aviv</td>
+            <td>5,000</td>
             <td><a href="https://israelmobile.business.site/">link</a></td>
-            <td>5/5</td>
-            <td><button class="btn btn-danger" type="button">Delete</button> <button class="btn btn-primary"
-                    type="button">Buy</button></td>
-
-        </tr>
-        <tr id="tr2">
-            <td>2</td>
-            <td><img src="2.jpg" alt="1" width="50" height="40"></td>
-            <td>mobile number 2</td>
-            <td>arlozorov 200</td>
-            <td>Jerusalem</td>
-            <td>3,000</td>
-            <td><a href="https://mobileland.co.il/">link</a></td>
-            <td>4/5</td>
-            <td><button class="btn btn-danger" type="button">Delete</button> <button class="btn btn-primary"
-                    type="button">Buy</button></td>
-
-
-        </tr>
-        <tr id="tr3">
-            <td>3</td>
-            <td><img src="3.jpg" alt="1" width="50" height="40"></td>
-            <td>mobile number 3</td>
-            <td>arlozorov 300</td>
-            <td>Ashdod</td>
-            <td>2,000</td>
-            <td><a href="https://www.amazon.in/mobile-phones/b?ie=UTF8&node=1389401031">link</a></td>
             <td>3/5</td>
-            <td><button class="btn btn-danger" type="button" id="3" onclick="removeRow('number3')">Delete</button> <button
-                    class="btn btn-primary" type="button">Buy</button></td>
+            <td>
+                <div class="btns-options">
+                    <button class="btn btn-danger" type="button" onclick="removeRow('tr1')">Delete</button>
+                    <a href="table1.html" target="_blank" class="btn btn-primary active">Buy</a>
+                </div>
+            </td>
+
+        </tr>
+        <tr id="tr2" style="background-color:rgb(120, 255, 120)">
+            <td>2</td>
+            <td><img src="2.png" alt="1" width="100" height="100">&nbsp;<a href="https://mobileland.co.il/"
+                    target="_blank">
+                    link</a></td>
+            <td>מחסני חשמל</td>
+            <td>Yaffo 65</td>
+            <td>Jerusalem</td>
+            <td>4,500</td>
+            <td><a href="https://mobileland.co.il/">link</a></td>
+            <td>5/5</td>
+            <td>
+                <div class="btns-options">
+                    <button class="btn btn-danger" type="button" onclick="removeRow('tr2')">Delete</button>
+                    <a href="table2.html" target="_blank" class="btn btn-primary active">Buy</a>
+                </div>
+            </td>
+
+
+        </tr>
+        <tr id="tr3" style="background-color: rgb(255, 111, 111);">
+            <td>3</td>
+            <td><img src="3.png" alt="1" width="100" height="100">&nbsp;<a
+                    href="https://www.amazon.in/mobile-phones/b?ie=UTF8&node=1389401031" target="_blank"> link</a></td>
+            <td>ACE</td>
+            <td>Hanamal 1</td>
+            <td>Ashdod</td>
+            <td>6,000</td>
+            <td><a href="https://www.amazon.in/mobile-phones/b?ie=UTF8&node=1389401031">link</a></td>
+            <td>1/5</td>
+            <td>
+                <div class="btns-options">
+                    <button class="btn btn-danger" type="button" onclick="removeRow('tr3')">Delete</button>
+                    <a href="table3.html" target="_blank" class="btn btn-primary active">Buy</a>
+                </div>
+            </td>
+            </td>
 
 
         </tr>
         <tr id="tr4">
             <td>4</td>
-            <td><img src="4.jpg" alt="1" width="50" height="40"></td>
-            <td>mobile number 4</td>
-            <td>arlozorov 400</td>
-            <td>Petah Tikva</td>
-            <td>1,000</td>
+            <td><img src="4.png" alt="1" width="100" height="100">&nbsp;<a href="https://www.t-mobile.com/cell-phones"
+                    target="_blank">link</a></td>
+            <td>א.ל.מ</td>
+            <td>Pinkas 2</td>
+            <td>Petah -Tikva</td>
+            <td>6,500</td>
             <td><a href="https://www.t-mobile.com/cell-phones">link</a></td>
             <td>2/5</td>
-            <td><button class="btn btn-danger" type="button">Delete</button> <button class="btn btn-primary"
-                    type="button">Buy</button></td>
-
-
+            <td>
+                <div class="btns-options">
+                    <button class="btn btn-danger" type="button" onclick="removeRow('tr4')" id="btn4">Delete</button>
+                    <a href="table4.html" target="_blank" class="btn btn-primary active">Buy</a>
+                </div>
+            </td>
         </tr>
     </table>
     <br />
-    <button type="Add" onclick="collectData()" id="add_btn">Add</button>
-    </form>
-    <br />
-    <div id="result">
-        <script>
 
 
-            function removeRow() {
-                document.getElementById('number3')
+
+    <script>
+
+        const tableRows = [
+            { "#": 1, "image": "<img src='1.jpg'>", "Name of the stor": 'KSP', "address": "Narkis 15", "city": "Tel-Aviv", "price": 5000, "rating": 3 / 5, },
+            { "#": 2, "image": "<img src='2.jpg'>", "Name of the stor": 'מחסני חשמל', "address": "Yaffo 65", "city": "Netanya", "price": 4500, "rating": 5 / 5, },
+            { "#": 3, "image": "<img src='3.jpg'>", "Name of the stor": 'ASE', "address": "Hanamal 1", "city": "Jerusalem", "price": 6000, "rating": 1 / 5, },
+            { "#": 4, "image": "<img src='4.jpg'>", "Name of the stor": 'א.ל.מ', "address": "Pinkas 2", "city": "Haifa", "price": 6500, "rating": 2 / 5, },
+        ]
+
+
+        function avgPrice(table, rows) {
+            let sum = 0;
+            for (let i = 0; i < table.length; i++) {
+                sum += table[i][rows]
             }
-        </script>
+            const result = sum / table.length
+            return result
+        }
+
+        const averagePrice = avgPrice(tableRows, 'price');
+        console.log('AVG: ' + averagePrice);
+
+
+        function removeRow(rowId) {
+            document.getElementById(rowId).remove()
+        }
+
+        function bestOption(table, parameter1, parameter2) {
+            let bestPrice = Infinity, bestIndex;
+            for (let i = 0; i < table.length; i++) {
+                if (table[i][parameter1] < bestPrice && table[i][parameter2] >= 4 / 5) {
+                    bestPrice = table[i][parameter1]
+                    bestIndex = i
+                }
+            } return bestIndex;
+
+        }
+
+        const result = bestOption(tableRows, "price", "rating")
+        console.log(result);
+    </script>
 
 </body>
 

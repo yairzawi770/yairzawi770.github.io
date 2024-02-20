@@ -1,0 +1,4 @@
+1. install nodejs
+2. create db.json file (json array, like in the attached file)
+3. npm install -g json-server
+4. json-server --watch db.json
