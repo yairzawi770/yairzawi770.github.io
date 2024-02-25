@@ -1,0 +1,14 @@
+{
+  "name": "proj1",
+  "version": "2.0.0",
+  "description": "ny first nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yair zawi",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
