@@ -53,7 +53,7 @@
         document.write('<br/>', '<br/>')
         //12
         let arr12 = ["cat", "dog", "elephant", "fox"]
-        document.write(arr12.every(w => w.length > 4))
+        document.write(arr12.every(w => w.length >= 4))
         document.write('<br/>', '<br/>')
         //13
         let arr13 = ["apple", "banana", "cherry", "date"]
@@ -67,8 +67,30 @@
         let arr15 = ["apple", "banana", "cherry"]
         document.write(arr15.find(w => w.includes('b')))
         document.write('<br/>', '<br/>')
-       
 
+
+        //details
+        const details = {
+            "id": "207865465",
+            "fname": "Yair",
+            "lname": "Zawi",
+            "ph": "0548012345",
+            "veg": "false",
+            "address": {
+                "contry": "Israel",
+                "city": "Emmanuel",
+                "street": "Pinchas Levin",
+                "number": 50,
+                "zipcode": 4484500,
+                "date of birth": "31/1/1997"
+            },
+            "schools": ["Benyaho", "Bet David"],
+            "siblings": ["Eliyahu", "Israel", "Netai", "Dan", "Shira", "Menachem Mendel", "Shimon", "Yoram Michael"],
+            "fathers": ["Abraham", "Yitzchak", "Jacob", "Moses", "Aaron", "David", "Shlomo"],
+            "mothers": ["Sarah", "Rebecca", "Rachel", "Leah"],
+            "hobby": ["Snooker", "football"]
+        }
+        document.write(JSON.stringify(details))
 
 
 
