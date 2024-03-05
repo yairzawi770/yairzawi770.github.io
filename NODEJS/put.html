@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PUT</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT</title>
+</head>
+
+<body>
+    <h2>Put User</h2>
+    <form id="user_form">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="username">User-Name:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="website">Web-Site:</label>
+        <input type="url" id="website" name="website">
+
+        <input type="submit" value="Send">        
+    </form>
+    <script>
+        function my_submit(e) {
+            e.preventDefault(); // prevents from the page to reload
+            //document.getElementsByTagName('body')[0].innerHTML += "Done."
+
+            const put_user = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                address: {
+                    city: document.getElementById('city').value },
+                email: document.getElementById('email').value,
+                username: document.getElementById('username').value,
+                phone: document.getElementById('phone').value,
+                website: document.getElementById('website').value,
+            }
+
+            if (put_user.id == '') {
+                delete put_user.id
+            }
+            if (put_user.name == '') {
+                delete put_user.name
+            }
+            if (put_user.address.city == '') {
+                delete put_user.address
+            }
+            if (put_user.email == '') {
+                delete put_user.email
+            }
+            if (put_user.username == '') {
+                delete put_user.username
+            }
+            if (put_user.phone == '') {
+                delete put_user.phone
+            }
+            if (put_user.website == '') {
+                delete put_user.website
+            }  
+
+            const send_details = {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(put_user)
+            }
+            fetch(`http://localhost:3000/users/${document.getElementById('id').value}`, send_details)
+            .then(response => response.json())
+            .then(data => {
+                alert('user updated (put)')
+            })
+        }
+
+        document.getElementById('user_form').onsubmit = my_submit
+
+        // complete this page -- lines 64-48
+        // add user using this page
+        // see it on the get page
+        // delete ther user using postman
+        // see it on the get page
+        // create the PUT page
+        // create DELETE page (like get by id)
+        // create the PATCH page -- 100% like PUT page
+
+        // GET     -- http://localhost:3000/users   no parameters needed in body
+        // GET/ID  -- http://localhost:3000/users/1 no parameters needed in body
+        // POST    -- http://localhost:3000/users   requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'
+        // PUT     -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'        
+        // PATCH   -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'                
+        // DELETE  -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'                        
+    </script>
+</body>
+
+</html>

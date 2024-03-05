@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET BY ID</title>
+</head>
+
+<body>
+    <h2>Get All</h2>
+    GET BY ID : <input type="number" id="countryId_txt" value="0">
+    <button id="get_user" onclick="get_county_buy_id()">GET BY ID</button>
+    &nbsp; <span id="result" style="color:red"></span><br /><br />
+    <table id="users_table" style="width: 100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>CAPITAL</th>
+                <th>NO. CITIZENS</th>
+                <th>CONTINENT</th>
+                <th>FLAG</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        function get_county_buy_id() {
+
+            const countryId = document.getElementById('countryId_txt').value
+
+            fetch(`http://localhost:3000/countries/${countryId}`)
+                .then(response => {
+                    if (response.status === 404) {
+                        return null;
+                    }
+                    return response.json()
+                })
+                .then(country => {
+                    // getElementsByTagName returns array
+                    // therefor we use the first element in the array == [0]
+                    const tbody = document.getElementById('users_table').getElementsByTagName('tbody')[0]
+                    //tbody.innerHTML = '';
+
+                    if (country == null) {
+                        document.getElementById('result').innerHTML = "Not found ..."
+                        return
+                    }
+
+                    document.getElementById('result').innerHTML = ""
+
+                    const new_row = document.createElement('tr')
+                    insert_cell(new_row, country.id)
+                    insert_cell(new_row, country.name)
+                    insert_cell(new_row, country.capital)
+                    insert_cell(new_row, country.number_of_citizens)
+                    insert_cell(new_row, country.continent)
+                    // insert_cell(new_row, country.url_to_flag_picture)
+                    const img = document.createElement("img")
+                    img.src = country.url_to_flag_picture
+                    img.style.width = '300px'
+                    const new_cell = document.createElement('td')
+                    new_cell.appendChild(img)
+                    new_row.appendChild(new_cell)
+                    tbody.appendChild(new_row)
+                })
+        }
+        function insert_cell(new_row, data) {
+            const new_cell = document.createElement('td')
+            new_cell.textContent = data
+            new_row.appendChild(new_cell)
+        }
+    
+        // GET
+        // GET ID
+    </script>
+</body>
+
+</html>
