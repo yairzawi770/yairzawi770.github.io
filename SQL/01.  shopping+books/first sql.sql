@@ -14,7 +14,7 @@ INSERT INTO shopping VALUES (5, 'Bamba', 5);
 INSERT INTO shopping VALUES (6, 'Orange', 10);
 
 select * from shopping
-SELECT id, name FROM shopping +++
+SELECT id, name FROM shopping 
 
 SELECT * FROM shopping WHERE amount > 5
 SELECT * FROM shopping WHERE amount = 2
