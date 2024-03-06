@@ -1,16 +1,17 @@
 {
-  "name": "28.2.2024",
+  "name": "sqlite_knex",
   "version": "1.0.0",
-  "description": "",
+  "description": "NODEJS KNEX SQLITE3",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "yair zawi",
+  "author": "yair",
   "license": "ISC",
   "dependencies": {
     "knex": "^3.1.0",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "devDependencies": {}
 }
