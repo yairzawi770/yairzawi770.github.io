@@ -1,5 +1,5 @@
-
-{"countries":[
+{
+  "countries": [
     {
       "id": "1",
       "name": "United States",
@@ -38,7 +38,13 @@
       "capital": "Canberra",
       "number_of_citizens": 25499884,
       "continent": "Oceania",
-      "url_to_flag_picture": "Australia.jpg"
+      "url_to_flag_picture": "Australia.jpg",
+      "address": {
+        "city": ""
+      },
+      "email": "",
+      "username": "",
+      "phone": ""
     },
     {
       "id": "6",
@@ -80,5 +86,5 @@
       "continent": "Europe",
       "url_to_flag_picture": "United Kingdom.jpg"
     }
-  ]}
-  
+  ]
+}

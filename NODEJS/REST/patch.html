@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PATCH</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATCH</title>
+</head>
+
+<body>
+    <h2>Patch User</h2>
+    <form id="user_form">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="username">capital:</label>
+        <input type="text" id="capital" name="username">
+
+        <label for="email">number_of_citizens:</label>
+        <input type="number" id="number_of_citizens" name="email">
+
+        <label for="city">continent:</label>
+        <input type="text" id="continent" name="city">
+
+        <label for="phone">url_to_flag_picture:</label>
+        <input type="image" id="url_to_flag_picture" name="phone">
+
+        <input type="submit" value="Send">        
+    </form>
+    <script>
+        function my_submit(e) {
+            e.preventDefault(); // prevents from the page to reload
+            //document.getElementsByTagName('body')[0].innerHTML += "Done."
+
+            const patch_user = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                address: {
+                    city: document.getElementById('capital').value },
+                email: document.getElementById('number_of_citizens').value,
+                username: document.getElementById('continent').value,
+                phone: document.getElementById('url_to_flag_picture').value,
+            }
+
+            if (patch_user.id == '') {
+                delete patch_user.id
+            }
+            if (patch_user.name == '') {
+                delete patch_user.name
+            }
+            if (patch_user.capital == '') {
+                delete patch_user.capital
+            }
+            if (patch_user.number_of_citizens == '') {
+                delete patch_user.number_of_citizens
+            }
+            if (patch_user.continent == '') {
+                delete patch_user.continent
+            }
+            if (patch_user.url_to_flag_picture == '') {
+                delete patch_user.url_to_flag_picture
+            }                                                                        
+
+            const send_details = {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(patch_user)
+            }
+            fetch(`http://localhost:3000/countries/${document.getElementById('id').value}`, send_details)
+            .then(response => response.json())
+            .then(data => {
+                alert('user patched')
+            })
+        }
+
+        document.getElementById('user_form').onsubmit = my_submit
+
+        // complete this page -- lines 64-48
+        // add user using this page
+        // see it on the get page
+        // delete ther user using postman
+        // see it on the get page
+        // create the PUT page
+        // create DELETE page (like get by id)
+        // create the PATCH page -- 100% like PUT page
+
+        // GET     -- http://localhost:3000/users   no parameters needed in body
+        // GET/ID  -- http://localhost:3000/users/1 no parameters needed in body
+        // POST    -- http://localhost:3000/users   requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'
+        // PUT     -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'        
+        // PATCH   -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'                
+        // DELETE  -- http://localhost:3000/users/1  requires the JSON object in body + 
+        //                                     Headers: 'Content-Type': 'application/json'                        
+    </script>
+</body>
+
+</html>
