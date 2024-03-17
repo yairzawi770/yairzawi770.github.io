@@ -1,0 +1,12 @@
+npm i bootstrap
+// open package.json -- was it added?
+// open mode_modules --> look inside
+// remove node_modules folder
+// (right-click folder + Delete)
+npm i
+// look at githubdesktop
+// do you see alot of files ??
+// add file called .gitignore
+//   inside write: 
+//   nodemodlues/**
+// look at githubdesktop - did it disappear?

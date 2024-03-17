@@ -1,0 +1,17 @@
+{
+  "name": "proj1",
+  "version": "2.0.0",
+  "description": "my first nodejs project",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itay hauptman",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "check-disk-space": "^3.4.0"
+  }
+}
