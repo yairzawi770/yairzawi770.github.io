@@ -1,20 +1,9 @@
 const http = require('http');
 const port = 3000
-const knex = require('knex')
-
-const data_base = knex({
-    client: 'pg',
-    connection: {
-        host: 'localhost',
-        user: 'postgres',
-        password: 'admin',
-        database: 'postgres'
-    }
-})
 
 // this function will run everytime a browser 
 // or a POSTMAN tries to connect to my server ...
-const server = http.createServer(async (request, response) => {
+const server = http.createServer((request, response) => {
     console.log(request.url);
     if (request.url == '/') {
         response.statusCode = 200;
@@ -42,73 +31,37 @@ const server = http.createServer(async (request, response) => {
                                             </html>
                                             `)
     }
-    else if (request.url == '/create-table' && request.method == 'POST') {
-        // run create table query
-        await data_base.raw(`CREATE TABLE company (id SERIAL PRIMARY KEY, name TEXT NOT NULL UNIQUE,`+
-        `age INT NOT NULL,`+
-        `address CHAR(50),`+
-        `salary REAL);`);
-        response.statusCode = 201
-        response.setHeader('Content-Type', 'text/html')
-        response.end(`TABLE COMPANY CREATED`)
-        
-    }
-
-    else if (request.url == '/employees/1' && request.method == 'GET') {
-        // return employee with id == 1
-    }
-    else if (request.url == '/employees' && request.method == 'GET') {
+    else if (request.url == '/customers' && request.method == 'GET') {
         response.statusCode = 200;
         response.setHeader('Content-Type', 'application/json')
-
-        const employees = await data_base.raw("select * from company")
-        employees.rows = employees.rows.map(e =>  
-            {
-            e.address = e.address.trimEnd();
-            return e;
-        })
-        // for experts - shortcut:
-        //({ ...e, address: e.address.trimEnd() } ))
-
-        console.log(employees.rows);
-
-        response.end(`${JSON.stringify(employees.rows)}`)
+        const customer = {
+            "id": 123456,
+            "name": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "phone": "555-1234-567",
+            "address": {
+                "street": "123 Elm Street",
+                "city": "Anytown",
+                "state": "Anystate",
+                "zipCode": "12345"
+            }
+        }
+        response.end(`${JSON.stringify(customer)}`)
     }
-    else if (request.url == '/employees' && request.method == 'POST') {
-        // run the insert query with 5 employees
-        `INSERT INTO company (name,age,address,salary)
-        VALUES ('Paul', 32, 'California', 20000.00);
-        INSERT INTO company (name,age,address,salary)
-        VALUES ('Allen', 25, 'Texas', 15000.00);
-        INSERT INTO company (name,age,address,salary)
-        VALUES ('Teddy', 23, 'Norway', 20000.00);
-        INSERT INTO company (name,age,address,salary)
-        VALUES ('Mark', 25, 'Rich-Mond ', 65000.00);
-        INSERT INTO company (name,age,address,salary)
-        VALUES ('David', 27, 'Texas', 85000.00);
-        INSERT INTO company (name,age,address,salary)
-        VALUES ('Kim', 22, 'South-Hall', 45000.00);`
-            .replaceAll('\n    ', '')
-            .split(';')
-            .filter(query => query)
-            .forEach(async query => { await data_base.raw(query + ';') })
+    else if (request.url == '/customers' && request.method == 'POST') {
         response.statusCode = 201;
         response.setHeader('Content-Type', 'text/html')
-        response.end(`5 employees insrted`)
+        response.end(`You sent Post to /customers`)
     }    
-    else if (request.url == '/employees' && request.method == 'PUT') {
+    else if (request.url == '/customers' && request.method == 'PUT') {
         response.statusCode = 200;
         response.setHeader('Content-Type', 'text/html')
         response.end(`You sent Put to /customers`)
     }      
-    else if (request.url == '/employees' && request.method == 'DELETE') {
-        // delete the table -- drop table
-        await data_base.raw(`DROP TABLE company;`);
-
-
+    else if (request.url == '/customers' && request.method == 'DELETE') {
         response.statusCode = 200;
         response.setHeader('Content-Type', 'text/html')
-        response.end(`COMPANY DELETED`)
+        response.end(`You sent Delete to /customers`)
     }          
     else {
         response.statusCode = 404;

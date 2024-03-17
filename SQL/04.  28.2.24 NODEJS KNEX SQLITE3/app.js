@@ -91,8 +91,6 @@ get_all()
 const new_employee = { NAME: 'David', AGE: 27, ADDRESS: 'Texas', SALARY: 85000 }
 insertRow(new_employee)
 
-get_by_id(5)
-
 const updated_employee = { NAME: 'David', AGE: 27, ADDRESS: 'Alaska', SALARY: 85000 }
 updateRow(updated_employee, 5)
 get_by_id(5)
