@@ -15,7 +15,6 @@ async function delete_table() {
     await data_base.raw(`DROP TABLE IF EXISTS COMPANY`);
 }
 
-
 async function create_table() {
     data_base.schema.createTableIfNotExists
     await data_base.raw(`CREATE TABLE IF NOT EXISTS COMPANY (
@@ -50,10 +49,15 @@ async function get_all() {
     const employees = await data_base.raw("select * from COMPANY")
     //const employees = await data_base.select('*').from('COMPANY');
     console.log(employees);
-
+    
     //await data_base.destroy() 
 }
 
+///////////////// GET\id
+async function get_by_id(id) {
+    const employee = await data_base.raw(`select * from COMPANY where id = ${id}`)
+    console.log(employee);
+}
 ///////////////// POST
 async function insertRow(new_employee) {
     // insert query
@@ -75,11 +79,6 @@ async function updateRow(updated_employee, id) {
 ///////////////// DELETE
 async function deleteRow(id) {
     await data_base.raw(`DELETE FROM COMPANY where id=?`, [id])
-}
-///////////////// GET\id
-async function get_by_id(id) {
-    const employee = await data_base.raw(`select * from COMPANY where id = ${id}`)
-    console.log(employee);
 }
 
 let finished = false;
