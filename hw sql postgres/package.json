@@ -1,13 +1,13 @@
 {
-  "name": "sqlite_knex",
+  "name": "hw-sql-postgres",
   "version": "1.0.0",
-  "description": "NODEJS KNEX SQLITE3",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node app_pg.js",
-    "start_sqlite": "node app_sqlite.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

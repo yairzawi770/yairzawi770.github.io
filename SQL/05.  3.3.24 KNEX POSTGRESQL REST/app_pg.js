@@ -47,7 +47,7 @@ function insert_rows_for_company() {
 async function get_all() {
     const employees = await data_base.raw("select * from company")
     //const employees = await data_base.select('*').from('company');
-    console.log(employees);
+    console.log(employees.rows);
 
     //await data_base.destroy() 
 }
@@ -68,7 +68,7 @@ async function insertRow(new_employee) {
 ///////////////// PUT-PATCH
 async function updateRow(updated_employee, id) {
     await data_base.raw(`UPDATE company set name=?,age=?,address=?,salary=? where id=?`,
-        [new_employee.name, new_employee.age, new_employee.address, new_employee.salary, id])
+        [updated_employee.name, updated_employee.age, updated_employee.address, updated_employee.salary, id])
 }
 ///////////////// DELETE
 async function deleteRow(id) {
@@ -77,19 +77,19 @@ async function deleteRow(id) {
 ///////////////// GET\id
 async function get_by_id(id) {
     const employee = await data_base.raw(`select * from company where id = ${id}`)
-    console.log(employee);
+    console.log(employee.rows);
 }
 
 let finished = false;
-// delete_table()
-//create_table()
- //insert_rows_for_company()
+// create_table()
+//  insert_rows_for_company()
 // get_all()
+// delete_table()
 
- //const new_employee = { name: 'David27', age: 27, address: 'Texas', salary: 85000 }
- //insertRow(new_employee)
+//  const new_employee = { name: 'David27', age: 27, address: 'Texas', salary: 85000 }
+//  insertRow(new_employee)
 
-get_by_id(5)
+// get_by_id(5)
 
 // const updated_employee = { name: 'David', age: 27, address: 'Alaska', salary: 85000 }
 // updateRow(updated_employee, 5)
