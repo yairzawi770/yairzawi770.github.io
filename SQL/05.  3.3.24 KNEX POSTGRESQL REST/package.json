@@ -4,7 +4,7 @@
   "description": "NODEJS KNEX SQLITE3",
   "main": "index.js",
   "scripts": {
-    "start": "node app_pg.js",
+    "start": "nodemon app_pg.js",
     "start_sqlite": "node app_sqlite.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

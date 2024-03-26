@@ -12,9 +12,9 @@ const data_base = knex({
 
 // GET GET/ID POST PUT DELETE 
 
-// async function delete_table() {
-//     await data_base.raw(`DROP TABLE if exists company;`);
-// }
+async function delete_table() {
+    await data_base.raw(`DROP TABLE if exists company;`);
+}
 
 
 async function create_table() {
