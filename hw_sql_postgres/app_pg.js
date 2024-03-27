@@ -47,7 +47,7 @@ async function insertRow(new_student) {
 
 ///////////////// PUT-PATCH
 async function updateRow(updated_student, id) {
-    await data_base.raw(`UPDATE students set id=?,name=?,city=?,birth=? where id=?`,
+    await data_base.raw(`UPDATE students set id=?,name=?,city=?,birth=?`,
     [updated_student.id, updated_student.name, updated_student.city, updated_student.birth])
 }
 
@@ -82,8 +82,8 @@ let finished = false;
 // const new_student = { id: 6, name: 'YAIR', city: 'NETIVOT', birth: 2000 }
 // insertRow(new_student)
 
-// const updated_student = { id: 4, name: 'OMER', city: 'JERUSALEM', birth: 1987 }
-// updateRow(updated_student, 4)
+const updated_student = { id: 6, name: 'OMER', city: 'JERUSALEM', birth: 2000 }
+updateRow(updated_student, 6)
 
 
 // get_all()

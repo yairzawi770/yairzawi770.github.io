@@ -91,7 +91,7 @@ let finished = false;
 
 // get_by_id(5)
 
-// const updated_employee = { name: 'David', age: 27, address: 'Alaska', salary: 85000 }
+// const updated_employee = { name: 'David', age: 27, address: 'Alaska', salary: 90000 }
 // updateRow(updated_employee, 5)
 // get_by_id(5)
 
