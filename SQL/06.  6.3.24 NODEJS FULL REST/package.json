@@ -1,11 +1,11 @@
 {
-  "name": "06.-6.3.24-nodejs-full-rest",
+  "name": "06.03.2024",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NODEJS FULL REST",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "server-nodb": "nodemon app_server-http1.js",
+    "server-nodb": "nodemon app-server-http.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "knex": "^3.1.0",
-    "pg": "^8.11.3"
+    "pg": "^8.11.3",
+    "sqlite3": "^5.1.7"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "10.03.2024",
+  "name": "07.-10.3.24-nodejs-restapi-express",
   "version": "1.0.0",
   "description": "nodejs restapi express",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.18.3",
+    "express": "^4.19.2",
     "knex": "^3.1.0",
     "pg": "^8.11.3"
   },

@@ -1,0 +1,7 @@
+ in gitBash (vs terminal also):
+ -i: to see the status code (i.e. 200)
+
+curl http://localhost:4000/
+curl -i -X POST http://localhost:4000/employees
+curl -i -X PUT http://localhost:4000/employees
+curl -i -X DELETE http://localhost:4000/employees
