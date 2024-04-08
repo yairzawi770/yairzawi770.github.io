@@ -1,7 +1,10 @@
- in gitBash (vs terminal also):
- -i: to see the status code (i.e. 200)
+in GitBash (vs terminal also):
+-i: to see the status code (i.e. 200)
 
-curl http://localhost:4000/
-curl -i -X POST http://localhost:4000/employees
-curl -i -X PUT http://localhost:4000/employees
-curl -i -X DELETE http://localhost:4000/employees
+curl -i http://localhost:3000/api/employees
+curl -i -X POST http://localhost:3000/api/employees-create-table
+curl -i -X POST http://localhost:3000/api/employees-create6
+curl -i -X PUT http://localhost:3000/api/employees/1
+curl -i -X DELETE http://localhost:3000/api/employees-delete-table
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Kimmchy","age": 29,"address": "Japan","salary": 49000}' http://localhost:3000/customers

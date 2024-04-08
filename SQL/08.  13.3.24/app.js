@@ -4,7 +4,7 @@ const express = require('express')
 const body_parser = require('body-parser')
 const path = require('path')
 const cors = require('cors')
-const config = require('config')
+const config = require('config') 
 const logger = require('./logger/my_logger')
 
 const app = express() // creates my server
