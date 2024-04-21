@@ -1,3 +1,3 @@
 calculator = require('./calculator')
 
-console.log(calculator.add(3,5));
+console.log(calculator.add(3, 5));

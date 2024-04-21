@@ -1,0 +1,9 @@
+npm init
+npm i mocha
+npm i chai
+npm i should
+
+//to run the test you need to write this command:
+mocha calculator.test.js
+
+assert: checked that component A is aqual to component B
