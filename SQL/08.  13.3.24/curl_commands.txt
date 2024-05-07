@@ -2,9 +2,10 @@
 in GitBash (vs terminal also):
 -i: to see the status code (i.e. 200)
 
-curl -i http://localhost:3000/
-curl -i -X POST http://localhost:3000/customers
-curl -i -X PUT http://localhost:3000/customers
-curl -i -X DELETE http://localhost:3000/customers
+curl -i localhost:3000/api/employees
+curl -i -X POST localhost:3000/api/employees/table/employees-create-table
+curl -i -X POST localhost:3000/api/employees/table/employees-create6
+curl -i -X PUT localhost:3000/api/employees/
+curl -i -X DELETE localhost:3000/api/employees/table/employees-delete-table
 
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Kimmchy","age": 29,"address": "Japan","salary": 49000}' http://localhost:3000/customers

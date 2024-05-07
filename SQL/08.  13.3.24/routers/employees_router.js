@@ -17,6 +17,17 @@ router.get('/:id', async (request, response) => {
     response.status(200).json(result)
 })
 
+router.post('/table/employees-create-table', async (request, response) => {
+    const result = await employees_dal.create_table()
+        response.status(result.code).json(result)
+    }
+)
+
+router.post('/table/employees-create6', async (request, response) => {
+    const result = await employees_dal.insert6_employees()
+    response.status(201).json({ result: "6 new employees created" })
+})
+
 router.post('', async (request, response) => {
     const new_employee = request.body
     // await data_base.raw(`INSERT INTO company (name,age,address,salary) VALUES (?, ?, ?, ?);`,
@@ -52,15 +63,5 @@ router.delete('/table/employees-delete-table', async (request, response) => {
     response.status(200).json(result)
 })
 
-router.post('/table/employees-create-table', async (request, response) => {
-    const result = await employees_dal.create_table()
-        response.status(result.code).json(result)
-    }
-)
-
-router.post('/table/employees-create6', async (request, response) => {
-    const result = await employees_dal.insert6_employees()
-    response.status(201).json({ result: "6 new employees created" })
-})
 
 module.exports = router
