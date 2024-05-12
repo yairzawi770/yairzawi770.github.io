@@ -1,0 +1,2 @@
+1. npm i knex && npm i pg && npm i express && npm i winston && npm i config 
+2. npm i cors && npm i body-parser && npm i chai && npm i mocha && npm i should

@@ -2,7 +2,7 @@
 in GitBash (vs terminal also):
 -i: to see the status code (i.e. 200)
 
-curl -i http://localhost:3000/
+curl -i http://localhost:3000/index.html
 curl -i -X POST http://localhost:3000/customers
 curl -i -X PUT http://localhost:3000/customers
 curl -i -X DELETE http://localhost:3000/customers
