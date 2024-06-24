@@ -1,0 +1,53 @@
+h1 {
+    color: red;
+}
+
+h3 {
+    color: deeppink;
+    background-color: greenyellow;
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    opacity: 0.5;
+}
+
+th {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: rgb(8, 143, 19);
+    background-color: rgb(97, 255, 97);
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    background-color: rgb(246, 255, 0);
+    text-align: center;
+    padding: 10px;
+}
+
+li{
+    list-style-type: square;
+}
+
+#first_b{
+    background-color: green;
+    color: black;
+    border-radius: 10px;
+    border-color: navy;
+    padding: 10px;
+}
+
+#scond_b{
+    background-color: blue;
+    color: yellow;
+    border-radius: 10px;
+    border-color: rgb(252, 0, 0);
+    padding: 10px;
+}

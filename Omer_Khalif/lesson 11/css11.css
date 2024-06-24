@@ -1,0 +1,20 @@
+h1{
+    border-color: rgb(255, 0, 0);
+    border-style: dotted solid dotted solid;
+    margin: 100px 50px;
+}
+
+p{
+    border-color: blue;
+    border-style: dotted solid;
+}
+
+h3 {
+    border-color: indigo;
+    border-style: double;
+}
+
+ol{
+    border-color: chocolate;
+    border-style: dashed;
+}

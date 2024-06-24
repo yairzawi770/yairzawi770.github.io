@@ -1,0 +1,53 @@
+body{
+    background-color: bisque;
+    text-align: center;
+    font-family: "Segoe UI Light";
+}
+
+#first_h3{
+    text-align: left;
+    color: red;
+}
+
+#scond_h3{
+    text-align: left;
+    color: rgb(112,123,177);
+}
+
+ol{
+    text-align: left;
+}
+
+ul{
+    text-align: left;
+}
+
+h1{
+    border-style: solid;
+    border-color: hotpink;
+   border-radius: 20px;
+}
+
+img{
+    border-radius: 40px;
+}
+
+table{
+margin: auto;
+}
+
+th{
+background-color: green;
+color: white; 
+padding: 10px;
+}
+
+#first_tr{
+background-color: rgb(255,246,219);
+padding: 10px;
+}
+
+#scond_tr{
+    background-color: rgb(192,192,192);
+    padding: 10px;
+}
