@@ -12,6 +12,7 @@ const data_base = knex({
     }
 })
 
+
 async function get_employees() {
     const employees = await data_base.raw("select * from company")
     employees.rows = employees.rows.map(e => {

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="yairzawi770.github.io/HW_NODEJS_EXPRESS/node_modules" />
+  </component>
+</project>
